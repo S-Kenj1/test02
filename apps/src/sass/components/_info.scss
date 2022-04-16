@@ -1,0 +1,30 @@
+.info{
+    .suptitle{
+        margin-bottom: 96px;
+    }
+    .info__flex{
+        display: flex;
+        justify-content: center;
+    }
+    .info__cards{
+        .info__cards--item{
+            max-width: 300px;
+            text-align: center;
+            margin: 0 10px;
+            .card__img{
+                background-color: $blue;
+                margin-bottom: 14px;
+            }
+            .card__title{
+                @include font(20px, 30px, $gray,);
+                letter-spacing: 7px;
+                text-transform: uppercase;
+                margin-bottom: 16px;
+            }
+            .card__text{
+                @include font(14px, 25px $grayText);
+                margin-bottom: 120px;
+            }
+        }
+    }
+}

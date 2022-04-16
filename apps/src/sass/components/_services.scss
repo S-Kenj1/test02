@@ -1,0 +1,38 @@
+.services{
+    background-color: $dark;
+    &__title{
+        padding-top: 77px;
+        color: $white;
+    }
+    &__suptitle{
+        margin-bottom: 61px;
+        color: $white;
+    }
+    .services__flex{
+        display: flex;
+        justify-content: center;
+        .services__cards--item{
+            width: 460px;
+            margin: 0 10px;
+            text-align: center;
+            .card__img{
+                padding: 15px;
+            }
+            .card__title{
+                @include font(20px, 30px, $white);
+                letter-spacing: 7px;
+                text-transform: uppercase;
+                margin-bottom: 23px;
+            }
+            .card__text{
+                width: 400px;
+                @include font(14px, 25px, $white);
+                margin: 0 auto;
+                margin-bottom: 15px;
+            }
+            .services__more{
+                margin-bottom: 95px;
+            }
+        }
+    }
+}

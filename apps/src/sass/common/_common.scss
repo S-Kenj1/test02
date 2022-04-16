@@ -1,0 +1,81 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'openSans';
+  font-weight: 400;
+  &::before{
+    font-family: 'icons';
+  }
+}
+body{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+:root{
+  --dark: #192024;
+  --black: #0c0c0c;
+  --black-gr: radial-gradient(90.2% 90.2% at 32.6% 9.8%, #2A2B2E 0%, #29292C 0.01%, #111215 100%);
+  --white: #ffffff;
+  --yellow: #F7CEAE;
+  --gray: #676767;
+  --gray-text: #8E8E9C;
+  --dark-yellow: #C08A20;
+  --line: #c9c9c9;
+  --blue: #69B9FF;
+}
+$blue: var(--blue);
+$dark: var(--dark);
+$black: var(--black);
+$black-gr: var(--black-gr);
+$white: var(--white);
+$yellow: var(--yellow);
+$gray: var(--gray);
+$grayText: var(--gray-text);
+$darkyellow: var(--dark-yellow);
+$line: var(--line);
+
+.icon{
+  &-phone::before{content: '\f879'; font-weight: 300;}
+  &-user::before{content: '\f007'; font-weight: 300;}
+  &-cart::before{content: '\f07a'; font-weight: 300;}
+  &-chevrone::before{content: '\f077'; font-weight: 300;}
+  &-heart::before{content: '\f004'; font-weight: 300;}
+  &-search::before{content: '\f002'; font-weight: 300;}
+  &-telegram::before{content: '\f3fe'; font-weight: 400;}
+  &-facebook::before{content: '\f39e'; font-weight: 400;}
+  &-instagram::before{content: '\f16d'; font-weight: 400;}
+}
+.container{
+  @include container();
+}
+.title{
+  @include font(30px, 36px, $gray);
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-bottom: 17px;
+}
+.suptitle{
+  @include font(17px, 20px, $grayText);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.more{
+  padding: 10px 30px 12px;
+  margin: 0 10px;
+  border: 1px solid $white;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  @include font(16px, 21px, $white, 400);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.more:hover{
+  background-color: $blue;
+}

@@ -1,0 +1,44 @@
+.navbar__flex{
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .navbar__logo{
+        @include font(25px, 25px, $blue, 400);
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-bottom: 16px;
+        margin-left: 10px;
+    }
+    .navbar__menu{
+        min-width: 400px;
+        .navbar__menu--top{
+            display: flex;
+            justify-content: space-around;
+            li{
+                padding: 20px 0;
+                a{
+                    @include font(15px, 20px, $gray, 400);
+                }
+            }
+        }
+    }
+}
+.header__flex{
+    min-height: 595px;
+    background-image: url(..//../images/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 77px;
+    .header__title{
+        @include font(59px, 60px, $white, 400);
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-top: 180px;
+        margin-bottom: 108px;
+    }
+}

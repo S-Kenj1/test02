@@ -1,0 +1,58 @@
+@mixin font($fz: null, $lh: null, $color: null, $fw: null) {
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+  color: $color;
+}
+
+@mixin media($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+$merriweather: ('Black', 900),('Bold', 700),('ExtraLight', 200),('Light', 300),('Medium', 500),('Regular', 400),('SemiBold', 600),('Thin', 100);
+@each $name, $weigth in $merriweather{
+  @font-face {
+    font-family: 'merriweather';
+    src: url('../fonts/Merriweather/Merriweather-#{$name}.ttf') format('truetype');
+    font-weight: $weigth;
+  }
+}
+
+$lora: ('Black', 900),('Bold', 700),('ExtraLight', 200),('Light', 300),('Medium', 500),('Regular', 400),('SemiBold', 600),('Thin', 100);
+@each $name, $weigth in $lora{
+  @font-face {
+    font-family: 'lora';
+    src: url('../fonts/Lora/Lora-#{$name}.ttf') format('truetype');
+    font-weight: $weigth;
+  }
+}
+$openSans: ('Regular', 400);
+@each $name, $weigth in $openSans{
+  @font-face {
+    font-family: 'openSans';
+    src: url('../fonts/OpenSans/OpenSans-#{$name}.ttf') format('truetype');
+    font-weight: $weigth;
+  }
+}
+$icons: ('light-300', 300),('brands-400', 400);
+@each $name, $weigth in $icons{
+  @font-face {
+    font-family: 'icons';
+    src: url('../fonts/webfonts/fa-#{$name}.ttf') format('truetype');
+    font-weight: $weigth;
+  }
+}
+
+@mixin container() {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  @include media(1400px){max-width: 1140px;}
+  @include media(1200px){max-width: 960px;}
+  @include media(992px){max-width: 720px;}
+  @include media(768px){max-width: 540px;}
+  @include media(320px){max-width: 100%;}
+}

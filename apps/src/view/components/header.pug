@@ -1,0 +1,17 @@
+nav.navbar.navbar__flex
+    a(href="#").navbar__logo Velocity
+    .navbar__menu
+         ul.navbar__menu--top
+            each link, key in ['Home','Contact','About Us','Gallery']
+                if(key <= 0)
+                    li
+                        a(href="#!")= link
+                else
+                    li: a(href="#!")= link
+header.header__flex
+    h1.header__title This is Velocity
+    .header__nav
+        button.more.header__btn--left sign up
+        button.more.header__btn--right Learn more
+   
+    
