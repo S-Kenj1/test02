@@ -15,17 +15,18 @@ body{
   margin: 0 auto;
 }
 :root{
-  --dark: #192024;
+  --dark: #383838;
   --black: #0c0c0c;
   --black-gr: radial-gradient(90.2% 90.2% at 32.6% 9.8%, #2A2B2E 0%, #29292C 0.01%, #111215 100%);
   --white: #ffffff;
   --yellow: #F7CEAE;
   --gray: #676767;
-  --gray-text: #8E8E9C;
+  --gray-text: #668CAD;
   --dark-yellow: #C08A20;
-  --line: #c9c9c9;
+  --tapBtn: #92A0AD;
   --blue: #69B9FF;
 }
+$tapBtn: var(--tapBtn);
 $blue: var(--blue);
 $dark: var(--dark);
 $black: var(--black);
@@ -38,15 +39,19 @@ $darkyellow: var(--dark-yellow);
 $line: var(--line);
 
 .icon{
-  &-phone::before{content: '\f879'; font-weight: 300;}
-  &-user::before{content: '\f007'; font-weight: 300;}
-  &-cart::before{content: '\f07a'; font-weight: 300;}
-  &-chevrone::before{content: '\f077'; font-weight: 300;}
-  &-heart::before{content: '\f004'; font-weight: 300;}
-  &-search::before{content: '\f002'; font-weight: 300;}
-  &-telegram::before{content: '\f3fe'; font-weight: 400;}
-  &-facebook::before{content: '\f39e'; font-weight: 400;}
-  &-instagram::before{content: '\f16d'; font-weight: 400;}
+  // &-phone::before{content: '\f879'; font-weight: 300;}
+  // &-user::before{content: '\f007'; font-weight: 300;}
+  // &-cart::before{content: '\f07a'; font-weight: 300;}
+  // &-chevrone::before{content: '\f077'; font-weight: 300;}
+  // &-heart::before{content: '\f004'; font-weight: 300;}
+  // &-search::before{content: '\f002'; font-weight: 300;}
+  // &-telegram::before{content: '\f3fe'; font-weight: 400;}
+  // &-instagram::before{content: '\f16d'; font-weight: 400;}
+  &-Facebook::before{content: '\f39e'; font-weight: 400;}
+  &-Twitter::before{content: '\f099'; font-weight: 400;}
+  &-Pinterest::before{content: '\f231'; font-weight: 400;}
+  &-Google::before{content: '\f0d5'; font-weight: 400;}
+  &-Webflow::before{content: '\f1ee'; font-weight: 400;}
 }
 .container{
   @include container();
@@ -64,6 +69,11 @@ $line: var(--line);
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
+}
+@include media (480px){
+  .suptitle{
+      @include font(13px, 14px);
+  }
 }
 .more{
   padding: 10px 30px 12px;

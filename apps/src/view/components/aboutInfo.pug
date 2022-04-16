@@ -1,0 +1,16 @@
+section.aboutInfo.aboutInfo__flex
+    .aboutInfo__about
+        h3.aboutInfo__title about velocity
+        p.aboutInfo__about--text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+    .aboutInfo__links
+        h3.aboutInfo__title useful links
+        a.aboutInfo__links--item(href="#") Phasellus gravida semper nisi
+        a.aboutInfo__links--item(href="#") Suspendisse nisl elit
+        a.aboutInfo__links--item(href="#") Dellentesque habitant morbi
+        a.aboutInfo__links--item(href="#") Etiam sollicitudin ipsum
+    .aboutInfo__social
+        h3.aboutInfo__title social
+        ul.aboutInfo__social--item
+            each link in ['Twitter', 'Facebook', 'Pinterest', 'Google', 'Webflow']
+                li: a(href="#!" class="icon-"+link)=link
+    

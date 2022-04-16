@@ -1,0 +1,9 @@
+.footer{
+    background-color: $dark;
+    margin-top: 35px;
+    text-align: center;
+    .footer__copyright{
+        padding: 40px 0;
+        @include font(15px, 20px, $tapBtn);
+    }
+}

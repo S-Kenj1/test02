@@ -1,0 +1,64 @@
+.tabSection{
+    .tabSection__flex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .tabSection__title{
+            padding-top: 77px;
+        }
+        .tabSection__suptitle{
+            margin-bottom: 73px;
+        }
+        @include media (480px){
+            .tabSection__suptitle{
+                margin-bottom: 50px;
+            }
+        }
+        .tabSection__nav{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .tabSecrion__nav--btn{
+                @include font(16px, 21px, $white);
+                padding: 0 30px;
+                margin: 0 5px;
+                background-color: $tapBtn;
+                text-transform: uppercase;
+                border-radius: 4px;
+                margin-bottom: 52px;
+            }
+            @include media (480px){
+                .tabSecrion__nav--btn{
+                    margin-bottom: 25px;
+                }
+            }
+        }
+        .tabSection__info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            &--img{
+                width: 100%;
+                margin-bottom: 16px;
+            }
+            &--title{
+                @include font(31px, 36px, $gray);
+                margin-bottom: 14px;
+            }
+            &--text{
+                @include font(13px, 25px, $grayText);
+                padding: 0 10px;
+                margin-bottom: 125px;
+            }
+            @include media (768px){
+                &--text{
+                    margin-bottom: 50px;
+                }
+            }
+        }
+        .tabSection__info.close{
+            display: none;
+        }
+    }
+}

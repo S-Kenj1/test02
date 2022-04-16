@@ -2,9 +2,15 @@
     .suptitle{
         margin-bottom: 96px;
     }
+    @include media (768px){
+        .suptitle{
+            margin-bottom: 50px;
+        }
+    }
     .info__flex{
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
     }
     .info__cards{
         .info__cards--item{
@@ -13,17 +19,22 @@
             margin: 0 10px;
             .card__img{
                 background-color: $blue;
-                margin-bottom: 14px;
+                margin-bottom: 16px;
             }
             .card__title{
                 @include font(20px, 30px, $gray,);
                 letter-spacing: 7px;
                 text-transform: uppercase;
-                margin-bottom: 16px;
+                margin-bottom: 13px;
             }
             .card__text{
-                @include font(14px, 25px $grayText);
-                margin-bottom: 120px;
+                @include font(14px, 25px, $grayText);
+                margin-bottom: 104px;
+            }
+            @include media (768px){
+                .card__text{
+                    margin-bottom: 50px;
+                }
             }
         }
     }

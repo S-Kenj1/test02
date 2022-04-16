@@ -16,12 +16,52 @@
         .navbar__menu--top{
             display: flex;
             justify-content: space-around;
+            align-items: center;
             li{
                 padding: 20px 0;
                 a{
+                    padding: 0 30px;    
                     @include font(15px, 20px, $gray, 400);
                 }
+                :hover{
+                    color: $blue;
+                }
             }
+        }
+    }
+    @include media (768px){
+        .navbar__menu{
+            display: none;
+        }
+    }
+    .navbar__menu--burger{
+        width: 30px;
+        height: 30px;
+        background-color: $blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+        border: none;
+        margin: 16px 10px 16px 0;
+        cursor: pointer;
+        span{
+            width: 20px;
+            height: 3px;
+            background-color: #fff;
+            margin-bottom: 3px;
+        }
+        span:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .navbar__menu--burger.close{
+        display: none;
+    }
+    @include media (768px){
+        .navbar__menu--burger.close, span{
+            display:   flex;
         }
     }
 }
@@ -33,12 +73,39 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 77px;
+    flex-wrap: wrap;
+    margin-bottom: 75px;
     .header__title{
         @include font(59px, 60px, $white, 400);
         letter-spacing: 4px;
         text-transform: uppercase;
         margin-top: 180px;
         margin-bottom: 108px;
+    }
+    @include media (768px){
+        .header__title{
+            @include font(45px, 46px);
+        }
+    }
+    @include media (480px){
+        .header__title{
+            @include font(28px, 29px);
+        }
+    }
+    @include media (320px){
+        .header__title{
+            @include font(22px, 25px);
+        }
+    }
+}
+@include media (480px){
+    .header__nav{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .header__btn--left,
+    .header__btn--right{
+        margin-bottom: 10px;
     }
 }
