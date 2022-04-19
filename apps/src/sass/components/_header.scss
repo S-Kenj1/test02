@@ -56,11 +56,11 @@
             margin-bottom: 0;
         }
     }
-    .navbar__menu--burger.close{
+    .navbar__menu--burger{
         display: none;
     }
     @include media (768px){
-        .navbar__menu--burger.close, span{
+        .navbar__menu--burger{
             display:   flex;
         }
     }

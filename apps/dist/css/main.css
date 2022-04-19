@@ -245,7 +245,7 @@ body {
 .navbar__flex .navbar__menu--burger span:last-child {
   margin-bottom: 0; }
 
-.navbar__flex .navbar__menu--burger.close {
+.navbar__flex .navbar__menu--burger {
   display: none; }
 
 .header__flex {
@@ -375,6 +375,9 @@ body {
   border-radius: 4px;
   margin-bottom: 52px; }
 
+.tabSection .tabSection__flex .tabSection__nav :hover {
+  background-color: var(--blue); }
+
 .tabSection .tabSection__flex .tabSection__info {
   display: flex;
   flex-direction: column;
@@ -485,8 +488,7 @@ body {
     max-width: 540px; }
   .navbar__flex .navbar__menu {
     display: none; }
-  .navbar__flex .navbar__menu--burger.close,
-  .navbar__flex span {
+  .navbar__flex .navbar__menu--burger {
     display: flex; }
   .header__flex .header__title {
     font-size: 45px;
